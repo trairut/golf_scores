@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+<div class="centered-container container">
+    <div class="sign-form card">
+    <form class="form-submit" action="{% url 'accounts:signin' %}" method="post">
+        {% csrf_token %}
+        <h3>Sign In</h3>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="username" class="form-control" name="username" id="username" aria-describedby="username"
+                placeholder="Enter username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+        </div>
+        <p>Don't have an account? <a href="{% url 'accounts:signup' %}">Sign Up here<a /></p>
+{% if error_message %}
+<div class="alert alert-danger" role="alert">
+    {{ error_message }}
+</div>
+{% endif %}
+<button type="submit" class="btn btn-lg btn-primary btn-block">Sign In</button>
+</form>
+</div>
+</div>
+{% endblock %}

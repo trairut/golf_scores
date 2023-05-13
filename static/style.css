@@ -1,0 +1,29 @@
+.centered-container {
+    margin-top: 10%;
+}
+
+.title{
+    text-align: center;
+}
+
+.sign-form {
+    margin: 0 auto;
+    max-width: 30rem;
+    text-align: center;
+    border: 0px;
+}
+
+.card-image {
+    width: 400px;
+    height: 400px;
+}
+
+.brief-image{
+    width: 400px;
+    height: 400px;
+}
+
+.logo {
+    width: 30px;
+    height: 25px;
+}
