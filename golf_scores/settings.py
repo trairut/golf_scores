@@ -87,14 +87,23 @@ WSGI_APPLICATION = 'golf_scores.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'golf_scores', 
+#         'USER': 'postgres',
+#         'PASSWORD': 'TAE123trairut',
+#         'HOST': '127.0.0.1', 
+#         'PORT': '5432',
+#     }
+# }
+
+
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'golf_scores', 
-        'USER': 'postgres',
-        'PASSWORD': 'TAE123trairut',
-        'HOST': '127.0.0.1', 
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_DIR, 'golfscores.db'),
     }
 }
 
